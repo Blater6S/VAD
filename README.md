@@ -1,23 +1,60 @@
-My First Project: "Small" Voice Activity Detection App
+My First Project: “Small” Voice Activity Detection App
 
-😏 What’s this all about?
-So yeah, this is my first-ever project, and I didn’t want to start with "Hello World" or make a calculator like every next chomu out there.
-Instead, I went full throttle into Voice Activity Detection (VAD) with some serious audio & video analysis and real-time speech-to-text (STT) magic.
-
-And because looking good is half the battle won, I packed it all inside a sleek, dark-themed GUI using CustomTkinter. 😎
-Whether you’re analyzing audio files, ripping speech out of videos, or just want your mic to act like Jarvis — this tool’s got your back.
+What’s This?
+Not your average Hello World. I started off bold — with a voice activity detector, live speech-to-text, and audio-video analysis. All packed in a dark-themed CustomTkinter GUI.
 
 🏗️ Project Structure
-Here's how the machine works under the hood (don’t worry, no rats running inside):
 
-  * UnifiedApp: The mastermind. Handles GUI + logic. Basically, cool stuff.
+   * UnifiedApp: The brain. GUI + logic.
+   * VADNet: My custom PyTorch model for speech detection.
+   * Live STT: Real-time mic input + transcription.
+   * File Analyzer: Load media, visualize audio, extract sounds.
+   * File STT: Offline audio transcription via VOSK.
 
-  * VADNet: My custom PyTorch neural net model that detects those "hmm, someone is talking!" moments.
+⚙️ Key Features
 
-  * Live STT: Plug in your mic, say something cool, and boom — it gets transcribed. Only if it passes the VAD test.
+📂 File Analyzer Tab
 
-  * File Analyzer: Load audio/video files, visualize the sound, play-pause it, and extract audio like a hacker.
+Load audio/video (.mp3, .mp4, .wav, etc.)
 
-  * File STT: Feed in any audio file and let it spit out clean text using VOSK + KaldiRecognizer. Offline. Safe. Desi approved.
+View waveform, zoom loudest spots, toggle spectrogram
 
+Extract audio (single or batch), play/pause in-app
 
+Auto-mark loudest moments
+
+🎤 Live VAD + STT Tab
+
+Real-time BiLSTM-based speech detection
+
+Transcribes only when actual voice detected
+
+Live waveform + speech-to-text
+
+Filters out fan and background noise
+
+Advised (If your mic doesn’t work… well, that’s a you problem not a code problem )
+
+🗣️ File Transcriber Tab
+
+Load pre-recorded audio
+
+Segments + transcribes in real-time
+
+View transcript instantly
+
+Module Stack
+PyTorch, Librosa, MoviePy, Pydub, VOSK, Sounddevice, Matplotlib, CustomTkinter, Tkinter, Multithreading.
+Offline. No cloud. No nonsense.
+
+Why I Built This?
+Because existing tools suck. I wanted something offline, smart, fast, and clean. So I made it myself.
+
+Bonus Vibes
+Open app → load file → see sexy waveform dance.
+Talk into mic → it types.
+Batch transcribe → done.
+Feels like Jarvis. Works like a beast.
+
+My Final Thought
+Don’t let the name fool you — it’s called “small,” but it hits like a rocket. Occasionally explodes too... but that’s part of the fun. 😎
