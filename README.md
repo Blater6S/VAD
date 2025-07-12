@@ -10,6 +10,7 @@ Not your average Hello World. I started off bold — with a voice activity detec
    * Live STT: Real-time mic input + transcription.
    * File Analyzer: Load media, visualize audio, extract sounds.
    * File STT: Offline audio transcription via VOSK.
+   * Download vosk-model-small-en-us-0.15 form this ( https://alphacephei.com/vosk/models )
 
 ⚙️ Key Features
 📂 File Analyzer Tab
